@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+}
+
+/* keeps the flow so the next section starts after one viewport */
+#hero-spacer {
+  height: 100vh;
+}
+
+/* good hygiene if not already in main.css */
+html, body { margin: 0; padding: 0; }
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+  padding: 15px 0;
+  background: rgba(0,0,0,0.3); /* or just transparent if you prefer */
+}

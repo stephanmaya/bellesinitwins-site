@@ -1,0 +1,73 @@
+#threeDays {
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #000;
+  z-index: 2;
+  transition: opacity 0.8s linear;
+}
+
+#threeDays.visible {
+  opacity: 1;
+}
+
+.threeDays-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#threeDays-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#threeDays-play {
+  position: absolute;
+  z-index: 3;
+  font-size: 2rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#threeDays-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#threeDays-video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.77%; /* 16/9 ratio workaround */
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.threeDays-overlay {
+  font-family: 'Roboto Condensed', sans-serif;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 4;
+  color: #fff;
+}

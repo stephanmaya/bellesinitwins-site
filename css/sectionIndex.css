@@ -1,0 +1,45 @@
+#sectionIndex {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  font-family: sans-serif;
+}
+
+#sectionIndex ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sectionIndex li {
+  width: 16px;
+  height: 16px;
+  margin: 12px 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#sectionIndex li.active {
+  background: #fff;
+  box-shadow: 0 0 8px #00ffff, 0 0 12px #00ffff inset;
+}
+
+#sectionIndex li:hover::after {
+  content: attr(title);
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  pointer-events: none;
+}
